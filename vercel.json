@@ -22,24 +22,11 @@
       "source": "/data/(.*)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
     }
-  ]
-  "services": {
-    "craft-anything": {
-      "root": "apps/craft-anything",
-      "runtime": "rust"
-    },
-    "craft-anything-cli": {
-      "root": "apps/craft-anything-cli",
-      "runtime": "rust"
-    },
-    "craft-anything-web": {
-      "root": "apps/craft-anything-web",
-      "runtime": "rust"
-    },
-    "xtask": {
-      "root": "xtask",
-      "runtime": "rust"
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
-  },
-  "rewrites": []
+  ]
 }
